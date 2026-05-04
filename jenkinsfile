@@ -4,13 +4,17 @@ pipeline {
             label 'roboshop' 
         } 
     }
+    environment {
+        test = "tessss"
+    }
     stages {
         stage('Build') {
             steps {
                 script{
                     sh """
                     echo "building"
-                    exit 1
+                    # exit 1
+                    echo 'printing test variable ${test}'
                     """
                 }
                
