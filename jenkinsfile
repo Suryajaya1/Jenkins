@@ -4,34 +4,39 @@ pipeline {
             label 'roboshop' 
         } 
     }
+ 
+
     stages {
         stage('Build') {
             steps {
                 script{
                     sh """
-                    echo "building"
+                        echo "Building"
+                        
                     """
                 }
-               
             }
         }
         stage('Test') {
             steps {
-                script {
+               script{
                     sh """
-                    echo "Testing"
+                        testing
                     """
                 }
             }
         }
         stage('Deploy') {
+            
+
             steps {
-                script {
+                script{
                     sh """
-                    echo "Deploying"
+                        echo "Deploying"
                     """
                 }
             }
         }
     }
+
 }
