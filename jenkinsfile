@@ -7,6 +7,10 @@ pipeline {
     environment {
         test = "tessss"
     }
+    options {
+        disableConcurrentBuilds()
+        
+    }
     stages {
         stage('Build') {
             steps {
@@ -15,6 +19,7 @@ pipeline {
                     echo "building"
                     # exit 1
                     echo 'printing test variable ${test}'
+                    sleep 10 
                     """
                 }
                
