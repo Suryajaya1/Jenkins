@@ -25,7 +25,7 @@ pipeline {
                     sh """
                     echo "building"
                     # exit 1
-                    echo 'printing test variable ${test}'
+                    echo 'printing test variable ${test}' 
                     sleep 10 
                     """
                 }
