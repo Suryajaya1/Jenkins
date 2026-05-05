@@ -56,10 +56,11 @@ pipeline {
             }
         }
         stage('Deploy') {
-             when {
+            when {
                 expression { 
                     ${params.TOGGLE} == true 
                 }
+            }
             steps {
                 script {
                     sh """
